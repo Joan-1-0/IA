@@ -1,8 +1,8 @@
 import tensorflow  as tf
 import numpy as np
 
-celsius =  np.array([-40, -10, 0, 8, 15, 22, 38, 42,17,47,64,85,90,1,18,125,55],  dtype=float)
-Farenheit = np.array([-40, -14, 32, 46, 59, 72, 100, 108,63,117,147,185,194,34,64,252,131],  dtype=float)
+variable =  np.array([(2(x))^-2,(4(x))^-7,(2(x)^2,(4(x)^3)) ],  dtype=float) # type: ignore
+Derivada = np.array([(4/((x)^-3)), (21/((x)^-8)), 4(x), 12((x)^2)],  dtype=float) # type: ignore
 
 capa = tf.keras.layers.Dense(units=1, input_shape=[1])
 modelo=  tf.keras.models.Sequential([capa])
@@ -13,7 +13,7 @@ modelo.compile(
 )
 
 print("Comenzando entrenamiento...")
-historial = modelo.fit(celsius, Farenheit, epochs=1000,  verbose=False)
+historial = modelo.fit(variable, Derivada, epochs=1000,  verbose=False)
 print("Modelo entrenado")
 
 import matplotlib.pyplot as plt
@@ -23,5 +23,5 @@ plt.plot(historial.history["loss"])
 plt.show()
 
 print("Hagamos una predicción!")
-resultado = modelo.predict(np.array([[100.0]]))
-print("El resultado es " + str(resultado) + "fahrenheit")
+resultado = modelo.predict(np.array([[12((x)^4)]])) # type: ignore
+print("El resultado es " + str(resultado) + "Derivada")
